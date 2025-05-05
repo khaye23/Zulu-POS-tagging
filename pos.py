@@ -38,7 +38,7 @@ def read_text_file(filepath):
 
 
 # - Split into train, validation and test set.
-sentences = read_text_file(r"D:\HONOURS SCHOOL 2025\COMP703W1 Artificial Intelligence\assignment one\Zulu POS\zugoldseg.data")  
+sentences = read_text_file("zugoldseg.data")  
 train_data, test_data = train_test_split(sentences, test_size=0.2, random_state=42)
 val_data, test_data = train_test_split(test_data, test_size=0.5, random_state=42)
 
