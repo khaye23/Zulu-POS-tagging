@@ -80,7 +80,7 @@ def sent2labels(sent):
     return [label for token, label in sent]
 
 #save a cleaned up data in the JSON file
-with open(r"D:\HONOURS SCHOOL 2025\COMP703W1 Artificial Intelligence\assignment one\Zulu POS\cleaned_data.json", "w") as json_file:      #F:\HONOURS SCHOOL 2025\COMP703W1 Artificial Intelligence\assignment one\Zulu POS\
+with open("cleaned_data.json", "w") as json_file:      
     json.dump(sentences, json_file, indent=4)
 
 
@@ -216,7 +216,7 @@ print(classification_report(y_test_flat, y_test_pred_HMM_flat, zero_division=1))
 
 # Save the trained HMM model using pickle, to avoid having to train a model everytime you want to use it,
 # and also to be able to use it in future.
-with open(r"D:\HONOURS SCHOOL 2025\COMP703W1 Artificial Intelligence\assignment one\Zulu POS\trained_hmm_model.pkl", "wb") as f:                 
+with open("trained_hmm_model.pkl", "wb") as f:                 
     pickle.dump(model, f)
 
 
@@ -265,7 +265,7 @@ print(metrics.flat_classification_report(y_test_crf, y_test_pred_crf))
 
 
 # Save the trained model if needed
-with open(r"D:\HONOURS SCHOOL 2025\COMP703W1 Artificial Intelligence\assignment one\Zulu POS\trained_crf_model.pkl", "wb") as f:                 
+with open("trained_crf_model.pkl", "wb") as f:                 
     pickle.dump(crf, f)
 
 
